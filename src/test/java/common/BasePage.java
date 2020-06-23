@@ -25,11 +25,18 @@ public class BasePage {
         Assert.assertEquals( "Automação com Batista", driver.getTitle());
     }
 
-    protected void visualizarForm(){
+    protected void visualizarFormCriarUsuario(){
         driver.findElement(By.xpath("/html/body/div[2]/div[1]/ul/li[1]/a")).click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[1]/ul/li[1]/div/ul/li[1]/a")));
         driver.findElement(By.xpath("/html/body/div[2]/div[1]/ul/li[1]/div/ul/li[1]/a")).click();
     }
 
+    protected void acessarListaDeCompras(){
+        driver.findElement(By.xpath("/html/body/div[2]/div[1]/ul/li[2]/a")).click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[1]/ul/li[2]/div/ul/li[7]/a")));
+        driver.findElement(By.xpath("/html/body/div[2]/div[1]/ul/li[2]/div/ul/li[7]/a")).click();
+
+    }
 }

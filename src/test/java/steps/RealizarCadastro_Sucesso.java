@@ -25,7 +25,7 @@ public class RealizarCadastro_Sucesso extends BasePage {
 
     @Test
     public void acessarFormulario(){
-        visualizarForm();
+       visualizarFormCriarUsuario();
     }
 
     @Test

@@ -25,7 +25,7 @@ public class RealizarCadastro_Falha extends BasePage {
 
     @Test
     public void acessarFormulario(){
-        visualizarForm();
+        visualizarFormCriarUsuario();
     }
 
     @Test
@@ -38,7 +38,7 @@ public class RealizarCadastro_Falha extends BasePage {
     public void verificarMensagemDeErro(){
         Assert.assertEquals("3 errors proibiu que este usuário fosse salvo:",
                 driver.findElement(By.xpath("//div[@id=\"error_explanation\"]//h2")).getText());
-        
+
         Assert.assertEquals("Name translation missing: pt-BR.activerecord.errors.models.user.attributes.name.blank",
                 driver.findElement(By.xpath("//div[@id=\"error_explanation\"]//ul//li[contains(.,\"name.blank\")]")).getText());
 
@@ -48,6 +48,4 @@ public class RealizarCadastro_Falha extends BasePage {
         Assert.assertEquals("Email translation missing: pt-BR.activerecord.errors.models.user.attributes.email.invalid",
                 driver.findElement(By.xpath("//div[@id=\"error_explanation\"]//ul//li[contains(.,\"email.invalid\")]")).getText());
     }
-
-
 }
