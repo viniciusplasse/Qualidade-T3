@@ -25,10 +25,7 @@ public class RealizarCadastro_Sucesso extends BasePage {
 
     @Test
     public void acessarFormulario(){
-        driver.findElement(By.xpath("/html/body/div[2]/div[1]/ul/li[1]/a")).click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[1]/ul/li[1]/div/ul/li[1]/a")));
-        driver.findElement(By.xpath("/html/body/div[2]/div[1]/ul/li[1]/div/ul/li[1]/a")).click();
+        visualizarForm();
     }
 
     @Test
