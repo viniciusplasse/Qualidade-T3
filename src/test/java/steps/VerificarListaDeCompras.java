@@ -36,9 +36,5 @@ public class VerificarListaDeCompras extends BasePage {
 
         Assert.assertEquals("O primeiro item da lista deve ser Arroz", "Arroz",
                 driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[2]/div[2]/table/tbody/tr[1]/td[1]")).getText());
-
-
-
     }
-
 }
